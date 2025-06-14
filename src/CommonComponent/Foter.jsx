@@ -18,19 +18,19 @@ const Foter = () => {
       id: 2,
       icon: <IoNotifications />,
       name: "নোটিশ",
-      path: "",
+      path: "/notice",
     },
     {
       id: 3,
       icon: <CiReceipt />,
       name: "ফলাফল",
-      path: "",
+      path: "/result",
     },
     {
       id: 4,
       icon: <PiStudentFill />,
       name: "শিক্ষার্থী",
-      path: "",
+      path: "/student",
     },
   ];
   return (
