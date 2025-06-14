@@ -5,7 +5,7 @@ import { FaUserCircle } from "react-icons/fa";
 const Header = () => {
     return (
       <div className="container">
-        <div className="flex justify-between items-center font-notoSerif">
+        <div className="flex justify-between items-center ">
           <div>
             <h3 className="font-bold text-xl">আমাদের কলেজ</h3>
           </div>

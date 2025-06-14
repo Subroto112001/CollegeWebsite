@@ -42,12 +42,12 @@ const Navbar = () => {
 
   return (
     <div className="container">
-      <div className=" mt-5 overflow-x-auto no-scrollbar">
+      <div className=" mt-5 w-full overflow-x-auto no-scrollbar">
         <ul className="flex flex-nowrap gap-3 p-2">
           {menulist.map((item) => (
             <li
               key={item.id}
-              className="whitespace-nowrap  shadow text-sm cursor-pointer font-notoSerif"
+              className="whitespace-nowrap  shadow text-sm cursor-pointer font-hindShiliguri"
             >
               <NavLink
                 to={item.path}

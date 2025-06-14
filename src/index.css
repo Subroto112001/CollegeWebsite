@@ -1,19 +1,30 @@
 @import "tailwindcss";
-
 @layer base{
-  @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Bengali:wght@100..900&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap');
 
   .container {
     padding-left: 5px;
     padding-right: 5px;
   }
-
+body{
+  font-family: "Hind Siliguri", sans-serif;
+}
   
   
 }
 :root{
-  --notoSerif : "Noto Serif Bengali", serif;
+  --hindShiliguri :  "Hind Siliguri", sans-serif;
 }
 @theme{
---font-notoSerif : var(--notoSerif)
+--font-hindShiliguri : var(--hindShiliguri)
+}
+
+@layer utilities {
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none; 
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none; 
+  }
 }
