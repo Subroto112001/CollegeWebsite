@@ -15,19 +15,20 @@ const Navbar = () => {
     },
     {
       id: 3,
-      name: "শিক্ষর্থী",
-      path: "/students",
-    },
-    {
-      id: 4,
-      name: "অভিভাবক",
-      path: "/guardian",
-    },
-    {
-      id: 5,
       name: "ফলাফল",
       path: "/result",
     },
+    {
+      id: 4,
+      name: "শিক্ষর্থী",
+      path: "/student",
+    },
+    {
+      id: 5,
+      name: "অভিভাবক",
+      path: "/guardian",
+    },
+
     {
       id: 6,
       name: "ছবিঘর",

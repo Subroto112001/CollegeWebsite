@@ -50,10 +50,10 @@ const Foter = () => {
                   isPending
                     ? "text-black px-4 py-2 rounded flex flex-col justify-center items-center "
                     : isActive
-                    ? " text-red-500 font-bold  px-4 py-2 rounded flex flex-col justify-center items-center "
+                    ? " text-red-500 px-4 py-2 rounded flex flex-col justify-center items-center "
                     : "text-black   px-4 py-2 rounded flex flex-col justify-center items-center "
                 }
-              > <span className=" font-bold text-2xl">{item.icon}</span>
+              > <span className=" font-bold  text-2xl">{item.icon}</span>
                 <span>{item.name}</span>
               </NavLink>
             </li>
