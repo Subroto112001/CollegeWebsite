@@ -35,7 +35,7 @@ const Foter = () => {
   ];
   return (
     <div className="container fixed bottom-0 left-0 ">
-      <div>
+      <div className="bg-white">
         <ul className="flex justify-between items-center font-hindShiliguri">
           {footerItem.map((item) => (
             <li
