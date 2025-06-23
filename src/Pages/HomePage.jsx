@@ -34,7 +34,7 @@ const HomePage = () => {
       id: 5,
       TeacherName: "রনজিৎ কুমার মহন্ত",
       designation: "অধ্যক্ষ",
-      Message: "তোমরা কেউ পড়ালেখা করবা না",
+      Message: "বিবাহই হোক তোমাদের একমাত্র উদ্দেশ্য",
     },
   ];
 
@@ -45,7 +45,18 @@ const HomePage = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false,
+    appendDots: (dots) => (
+      <div
+        style={{ display: "flex", justifyContent: "center",  position : "relative"}}
+      >
+        <ul style={{ display: "flex", gap: "8px", position: "absolute", bottom: "40px" }}> {dots} </ul>
+      </div>
+    ),
+    customPaging: (i) => (
+      <div className="w-3 h-3 rounded-full border-2 border-black bg-gray-300 slick-dot"></div>
+    ),
   };
+  
   return (
     <div className="container ">
       <div className="w-[100%] flex justify-center items-center pt-[40px] sm:pt-[60px]">
@@ -53,7 +64,7 @@ const HomePage = () => {
           <div className="slider-container">
             <Slider {...settings}>
               {TeacherItems.map((item) => (
-                <div className=" max-h-[400px] py-5  ">
+                <div className=" h-[400px] py-5  ">
                   <div className="w-full flex flex-col justify-center items-center sm:flex-row sm:justify-start md:flex-row md:items-start   gap-4 ">
                     <div className="w-[100px] sm:w-[80px] sm:h-[80px] md:w-[100px] md:h-[100px] h-[100px] rounded-full">
                       <picture>
@@ -83,8 +94,12 @@ const HomePage = () => {
                     className="
                   flex justify-center items-center mt-[50px]"
                   >
-                    <div className="">
-                      <h3>"{item.Message}"</h3>
+                    <div>
+                      <h3>
+                        <span className="font-bold text-2xl">“</span>
+                        {item.Message}
+                        <span className="font-bold text-2xl">”</span>
+                      </h3>
                     </div>
                   </div>
                 </div>
