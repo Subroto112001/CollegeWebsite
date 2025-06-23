@@ -49,7 +49,7 @@ const HomePage = () => {
   return (
     <div className="container ">
       <div className="w-[100%] flex justify-center items-center pt-[80px] sm:pt-[40px]">
-        <div className="w-[60%] md:w-[70%] sm:w-[80%] bg-gray-400 p-6 sm:p-2 rounded">
+        <div className="w-[60%] md:w-[70%] sm:w-[20%] bg-gray-400 p-6 sm:p-2 rounded">
           <div className="slider-container">
             <Slider {...settings}>
               {TeacherItems.map((item) => (
