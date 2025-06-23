@@ -55,7 +55,7 @@ const HomePage = () => {
               {TeacherItems.map((item) => (
                 <div className=" h-[400px] ">
                   <div className="flex items-center gap-4 ">
-                    <div className="w-[100px] h-[100px] rounded-full">
+                    <div className="w-[100px] sm:w-[80px] sm:h-[80px] h-[100px] rounded-full">
                       <picture>
                         <img
                           src={RanojitSir}
