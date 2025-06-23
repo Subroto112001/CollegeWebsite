@@ -49,7 +49,7 @@ const HomePage = () => {
   return (
     <div className="container ">
       <div className="w-[100%] flex justify-center items-center pt-[80px] sm:pt-[40px]">
-        <div className="w-[60%] md:w-[20%] sm:w-[20%] bg-gray-400 p-6 sm:p-2 rounded">
+        <div className="w-[60%] md:w-[70%] sm:w-[80%] bg-gray-400 p-6 sm:p-2 rounded">
           <div className="slider-container">
             <Slider {...settings}>
               {TeacherItems.map((item) => (
@@ -65,7 +65,7 @@ const HomePage = () => {
                       </picture>
                     </div>
                     <div className="flex flex-col">
-                      <h2 className="text-[20px] font-medium">
+                      <h2 className="text-[20px] sm:text-[12px] font-medium">
                       {item.TeacherName}
                       </h2>
 
