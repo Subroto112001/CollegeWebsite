@@ -48,14 +48,14 @@ const HomePage = () => {
   };
   return (
     <div className="container ">
-      <div className="w-[100%] flex justify-center items-center pt-[80px] sm:pt-[40px]">
-        <div className="w-[60%] md:w-[70%] sm:w-[80%] bg-gray-400 p-6 sm:p-2 rounded">
+      <div className="w-[100%] flex justify-center items-center pt-[40px] sm:pt-[60px]">
+        <div className="w-[80%] md:w-[80%] sm:w-[70%] bg-gray-400 p-6 sm:p-2 rounded">
           <div className="slider-container">
             <Slider {...settings}>
               {TeacherItems.map((item) => (
-                <div className=" h-[400px] ">
-                  <div className="flex items-center gap-4 ">
-                    <div className="w-[100px] sm:w-[80px] sm:h-[80px] h-[100px] rounded-full">
+                <div className=" max-h-[400px] py-5  ">
+                  <div className="w-full flex flex-col justify-center items-center sm:flex-row sm:justify-start md:flex-row md:items-start   gap-4 ">
+                    <div className="w-[100px] sm:w-[80px] sm:h-[80px] md:w-[100px] md:h-[100px] h-[100px] rounded-full">
                       <picture>
                         <img
                           src={RanojitSir}
@@ -64,14 +64,16 @@ const HomePage = () => {
                         />
                       </picture>
                     </div>
-                    <div className="flex flex-col">
-                      <h2 className="text-[20px] sm:text-[12px] font-medium">
-                      {item.TeacherName}
+                    <div className="flex flex-col justify-center items-center sm:items-start md:items-start">
+                      <h2 className="text-[16px] sm:text-[18px] md:text-[18px] lg:text-[22px] font-medium">
+                        {item.TeacherName}
                       </h2>
 
-                      <h2 className="text-[14px] font-medium">{item.designation},</h2>
+                      <h2 className="text-[14px] sm:text-[16px] font-medium">
+                        {item.designation},
+                      </h2>
 
-                      <h2 className="text-[14px] font-medium">
+                      <h2 className="text-[14px] sm:text-[16px] font-medium">
                         সরকারী হুলুলুলু কলেজ
                       </h2>
                     </div>
@@ -87,8 +89,6 @@ const HomePage = () => {
                   </div>
                 </div>
               ))}
-
-           
             </Slider>
           </div>
         </div>
