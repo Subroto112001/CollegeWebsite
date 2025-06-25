@@ -1,6 +1,10 @@
 import React from "react";
 import Slider from "react-slick";
 import RanojitSir from "../assets/RanojitSir.jpg"
+import Sarc1 from "../assets/Sarc.jpg"
+import Sarc2 from "../assets/Sarc2.jpg"
+import Sarc3 from "../assets/Sarc3.jpg"
+import Sarc4 from "../assets/Sarc4.jpg";
 const HomePage = () => {
 
 
@@ -8,34 +12,20 @@ const HomePage = () => {
   const TeacherItems = [
     {
       id: 1,
-      TeacherName: "রনজিৎ কুমার মহন্ত",
-      designation: "অধ্যক্ষ",
-      Message: "তোমরা কেউ পড়ালেখা করবা না",
+      photos: Sarc1,
     },
     {
       id: 2,
-      TeacherName: "রনজিৎ কুমার মহন্ত",
-      designation: "অধ্যক্ষ",
-      Message: "তোমরা কেউ পড়ালেখা করবা না",
+      photos: Sarc2,
     },
     {
       id: 3,
-      TeacherName: "রনজিৎ কুমার মহন্ত",
-      designation: "অধ্যক্ষ",
-      Message: "তোমরা কেউ পড়ালেখা করবা না",
+      photos: Sarc3,
     },
     {
       id: 4,
-      TeacherName: "রনজিৎ কুমার মহন্ত",
-      designation: "অধ্যক্ষ",
-      Message: "তোমরা কেউ পড়ালেখা করবা না",
-    },
-    {
-      id: 5,
-      TeacherName: "রনজিৎ কুমার মহন্ত",
-      designation: "অধ্যক্ষ",
-      Message: "বিবাহই হোক তোমাদের একমাত্র উদ্দেশ্য",
-    },
+      photos: Sarc4,
+    }
   ];
 
   const settings = {
@@ -49,7 +39,7 @@ const HomePage = () => {
       <div
         style={{ display: "flex", justifyContent: "center",  position : "relative"}}
       >
-        <ul style={{ display: "flex", gap: "8px", position: "absolute", bottom: "40px" }}> {dots} </ul>
+        <ul style={{ display: "flex", gap: "8px", position: "absolute", bottom: "0px" }}> {dots} </ul>
       </div>
     ),
     customPaging: (i) => (
@@ -59,49 +49,19 @@ const HomePage = () => {
   
   return (
     <div className="container ">
-      <div className="w-[100%] flex justify-center items-center pt-[40px] sm:pt-[60px]">
-        <div className="w-[80%] md:w-[80%] sm:w-[70%] bg-gray-400 p-6 sm:p-2 rounded">
+      <div className=" flex justify-center items-center pt-[40px] sm:pt-[60px]">
+        <div className="w-[90%] md:w-[80%] sm:w-[70%]  rounded">
           <div className="slider-container">
             <Slider {...settings}>
               {TeacherItems.map((item) => (
-                <div className=" h-[400px] py-5  ">
-                  <div className="w-full flex flex-col justify-center items-center sm:flex-row sm:justify-start md:flex-row md:items-start   gap-4 ">
-                    <div className="w-[100px] sm:w-[80px] sm:h-[80px] md:w-[100px] md:h-[100px] h-[100px] rounded-full">
-                      <picture>
-                        <img
-                          src={RanojitSir}
-                          alt={RanojitSir}
-                          className="w-full h-full rounded-full border-4 border-blue-500"
-                        />
-                      </picture>
-                    </div>
-                    <div className="flex flex-col justify-center items-center sm:items-start md:items-start">
-                      <h2 className="text-[16px] sm:text-[18px] md:text-[18px] lg:text-[22px] font-medium">
-                        {item.TeacherName}
-                      </h2>
-
-                      <h2 className="text-[14px] sm:text-[16px] font-medium">
-                        {item.designation},
-                      </h2>
-
-                      <h2 className="text-[14px] sm:text-[16px] font-medium">
-                        সরকারী হুলুলুলু কলেজ
-                      </h2>
-                    </div>
-                  </div>
-
-                  <div
-                    className="
-                  flex justify-center items-center mt-[50px]"
-                  >
-                    <div>
-                      <h3>
-                        <span className="font-bold text-2xl">“</span>
-                        {item.Message}
-                        <span className="font-bold text-2xl">”</span>
-                      </h3>
-                    </div>
-                  </div>
+                <div key={item.id} className="flex justify-center items-center">
+                  <picture className="flex justify-center">
+                    <img
+                      src={item.photos}
+                      alt={item.photos}
+                      className="mx-auto max-w-full h-auto"
+                    />
+                  </picture>
                 </div>
               ))}
             </Slider>
